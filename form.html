@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a Car - One Piece Motors</title>
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body background="images/WhatsApp Image 2025-03-08 at 17.02.33_5e9b183f.jpg">
+    <header>
+        <h1>One Piece Motors</h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Buy a Car</h2>
+        <form action="form.php" method="POST">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="carModel">Car Model:</label>
+            <input type="text" id="carModel" name="carModel" placeholder="Enter the car model you are interested in" required>
+
+            <label for="budget">Budget:</label>
+            <input type="number" id="budget" name="budget" placeholder="Enter your budget" required>
+
+            <label for="messages">Additional Messages:</label>
+            <textarea id="messages" name="messages" placeholder="Any additional information or questions"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

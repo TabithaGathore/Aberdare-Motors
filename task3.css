@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: darkgray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    overflow: hidden;/* Prevent scrolling of the body when modal is open */
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Allow the main content to grow and take available space */
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 0px 0;
+    text-align: center;
+   margin-top: 0;
+}
+
+h1{
+    margin: 0;
+    color: whitesmoke;
+}
+
+h2 {
+    margin: 20px 0;
+    color: whitesmoke;
+    
+}
+
+h3 {
+    margin: 10px 0;
+    color: whitesmoke;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Hero Section */
+.hero {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between text and image */
+    padding: 50px; /* Add padding */
+    height: 100vh; /* Full viewport height */
+}
+
+.text-content {
+    max-width: 50%; /* Limit the width of the text */
+    padding-right: 20px; /* Add some space between text and image */
+}
+
+.hero-image {
+    width: 105%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: rotate3D 5s infinite linear;
+    
+}
+
+@keyframes rotate3D {
+    0% {
+        transform: rotateY(30deg) rotateX(0deg);
+    }
+    50% {
+        transform: rotateY(180deg) rotateX(10deg);
+    }
+    100% {
+        transform: rotateY(300deg) rotateX(0deg);
+    }
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 5;
+}
+
+/* Vehicle List */
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    max-height: 80vh; /* Set a maximum height for the vehicle list */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.vehicle-list::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.vehicle-list {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.vehicle {
+    background-color: darkgray;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+ 
+.vehicle:hover img {
+    transform: scale(1.05); /* Scale up the image on hover */
+}
+
+.vehicle:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.vehicle-category {
+    cursor: pointer;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    transition: transform 0.3s ease;
+}
+
+.view{
+    background-color: rgb(234, 222, 222);
+    color: black;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+ 
+.view:hover{
+    background-color: #888;
+    color: white;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: white; /* White background */
+    color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888; /* Border color */
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.modal-content img {
+    width: 100%; /* Responsive image */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal-content::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal-content {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.close {
+    color: #aaa; /* Close button color */
+    float: right; /* Align to the right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.modal-content h2 {
+    margin: 0; /* Remove default margin */
+}
+
+.modal-content p {
+    margin: 10px 0; /* Margin for paragraphs */
+}
+
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+ 
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #42dac8; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #c0392b; /* Darker shade on hover */
+}
+
+/*home changes*/
+.main-container{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+}
+.text-container{
+    padding-left: 50px;
+    padding-top: 100px;
+    font-size: 30px;
+}
